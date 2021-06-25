@@ -38,13 +38,13 @@ const Login = () => {
           <input
             type="password"
             required
+            id='password'
             placeholder="**********"
             value={password}
             onChange={e => setPassword(e.target.value)}
           />
         </div>
 
-        <span id="forgotPassword">Forgot Password?</span>
         <button id="loginBtn">Login</button>
       </form>
       <div id="donthave">

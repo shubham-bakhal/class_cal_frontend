@@ -3,7 +3,7 @@
 
 #signup {
   background-color: $primary-light;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +15,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 2px solid $secondary-dark;
+    border: 2px solid $primary-color;
 
     span {
       color: $gray-color;
@@ -25,8 +25,8 @@
     #signupBtn {
       border: none;
       border-radius: 4px;
-      background-color: $secondary-light;
-      color: $secondary-dark;
+      background-color: $primary-color;
+      color: $primary-light;
       font-size: 16px;
       width: 300px;
       padding: 15px 0px;
@@ -51,11 +51,11 @@
             display: inline;
             margin:0px;
             width: 20px;
-            border: 1px solid $secondary-light;
+            border: 1px solid $primary-light;
         }
         span{
             margin: 0px 160px 0px 0px;
-            color: $secondary-dark;
+            color: $primary-color;
         }
     }
 
@@ -66,7 +66,7 @@
     width: 450px;
     margin-top: 15px;
     .redirect {
-      color: $secondary-dark;
+      color: $primary-color;
     }
   }
 }

@@ -3,10 +3,9 @@
 
 #login {
 
-  height: 100vh;
+  height: 90vh;
   overflow: hidden;
   background-color: $primary-light;
-  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,7 +17,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 2px solid $secondary-dark;
+    border: 2px solid $primary-color;
 
     span {
       color: $gray-color;
@@ -29,7 +28,7 @@
       margin-bottom: 20px;
     }
     #forgotPassword {
-      color: $secondary-dark;
+      color: $primary-color;
       margin-bottom: 20px;
       margin-top: 5px;
       margin-left: 45%;
@@ -37,9 +36,10 @@
     }
     #loginBtn {
       border: none;
-      border-radius: 4px;
-      background-color: $secondary-light;
-      color: $secondary-dark;
+      border-radius: 8px;
+      margin-top: 25px;
+      background-color: $primary-color;
+      color: $primary-light;
       font-size: 16px;
       width: 300px;
       padding: 15px 0px;
@@ -50,7 +50,7 @@
       padding: 10px;
       width: 300px;
       border: none;
-      border-radius: 8px;
+      border-radius: 4px;
     }
   }
   #donthave {
@@ -59,7 +59,7 @@
     width: 450px;
     margin-top: 15px;
     .redirect {
-      color: $secondary-dark;
+      color: $primary-color;
     }
   }
 }
