@@ -37,11 +37,12 @@ const DeleteEvent = () => {
   };
 
   const onUpdate = () => {
-  
     const id = deleteEvent.id;
-    dispatch(updateSelectedEvent({ id,Note, TeacherId, Batch, day, from, to }));
-    dispatch(removeDeleteEvent(null))
-  }
+    dispatch(
+      updateSelectedEvent({ id, Note, TeacherId, Batch, day, from, to })
+    );
+    dispatch(removeDeleteEvent(null));
+  };
 
   useEffect(() => {
     dispatch(searchAvailableTeachers({ day, from, to }));
@@ -82,8 +83,9 @@ const DeleteEvent = () => {
             value={to}
             onChange={e => setTo(e.target.value)}
           />
-          <div className="select_dropdown">
+          <div>
             <select
+              className="select_dropdown"
               value={TeacherId}
               required
               onChange={e => setTeacherId(e.target.value)}
@@ -96,8 +98,9 @@ const DeleteEvent = () => {
               ))}
             </select>
           </div>
-          <div className="select_dropdown">
+          <div>
             <select
+              className="select_dropdown"
               value={Batch}
               required
               onChange={e => setBatch(e.target.value)}
@@ -125,7 +128,9 @@ const DeleteEvent = () => {
         <button onClick={onDelete} id="deleteButton">
           Delete
         </button>
-        <button onClick={onUpdate} id="updateButton">update</button>
+        <button onClick={onUpdate} id="updateButton">
+          update
+        </button>
       </div>
 
       <div id="modalBackDrop"></div>

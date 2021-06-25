@@ -66,8 +66,8 @@ const CreateEvent = ({ onClose }) => {
             value={to}
             onChange={e => setTo(e.target.value)}
           />
-          <div className="select_dropdown">
-            <select
+          <div >
+            <select className="select_dropdown"
               value={TeacherId}
               onChange={e => setTeacherId(e.target.value)}
               name="display"
@@ -79,8 +79,8 @@ const CreateEvent = ({ onClose }) => {
               ))}
             </select>
           </div>
-          <div className="select_dropdown">
-            <select
+          <div >
+            <select className="select_dropdown"
               value={Batch}
               onChange={e => setBatch(e.target.value)}
               name="display"

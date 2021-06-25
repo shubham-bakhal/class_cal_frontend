@@ -44,6 +44,15 @@
   margin-bottom: 10px;
 }
 
+#newEventModal .event-input .select_dropdown,
+#deleteEventModal .event-input .select_dropdown {
+  border: 1px solid #6366F1;
+  min-width: 150px;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
 #newEventModal .event-input #eventTitleInput,
 #deleteEventModal .event-input #eventTitleInput {
   height: 50px;
