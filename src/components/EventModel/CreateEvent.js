@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../../Styles/createEventModel.css';
 import close from '../../assets/close.svg';
-import moment from 'moment';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { setClickeEvent, setEvents } from '../../actions/date.action';
 import { searchAvailableTeachers } from '../../actions/user.action';
@@ -50,7 +50,7 @@ const CreateEvent = ({ onClose }) => {
             type="date"
             value={day}
             onChange={e => setDay(e.target.value)}
-            min={moment().format('YYYY-MM-DD')}
+            
           />
           <p>From</p>
           <input

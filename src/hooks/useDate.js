@@ -20,7 +20,7 @@ export const useDate = () => {
       let month = new Date(e.day).getMonth();
       let year = new Date(e.day).getFullYear();
 
-      return date === `${month + 1}/${day}/${year}`;
+      return date === `${year}-${month + 1}-${day}`;
     });
 
   useEffect(() => {
@@ -64,7 +64,8 @@ export const useDate = () => {
 
     const daysArr = [];
     for (let i = 1; i <= paddingDays + daysInMonth; i++) {
-      const dayString = `${month + 1}/${i - paddingDays}/${year}`;
+      const dayString = `${year}-${month + 1}-${i - paddingDays}`;
+      // const dayString = `${month + 1}/${i - paddingDays}/${year}`;
 
       if (i > paddingDays) {
         daysArr.push({

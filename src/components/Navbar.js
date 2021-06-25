@@ -4,6 +4,7 @@ import search from '../assets/search.svg';
 import profile from '../assets/profile.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import { searchTeachersEvent } from '../actions/user.action';
+import { userLogoutAction } from '../actions/auth.action';
 
 const Navbar = () => {
   const auth = useSelector(state => state.auth);
@@ -14,6 +15,10 @@ const Navbar = () => {
     dispatch(searchTeachersEvent({searchStr}));
     setSearchStr('')
   };
+
+  const logout = () => {
+    dispatch(userLogoutAction());
+  }
 
   return (
     <div id="navbar">
@@ -36,7 +41,7 @@ const Navbar = () => {
           <img onClick={searchTeacher} src={search} alt="" />
         </form>
       )}
-      {auth.auth && <img src={profile} alt="" />}
+      {auth.auth && <img onClick={logout} src={profile} alt="" />}
     </div>
   );
 };

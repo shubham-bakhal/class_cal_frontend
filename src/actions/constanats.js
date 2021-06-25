@@ -57,7 +57,6 @@ export const userConstants = {
 export const weekConstants = {
   "SET_WEEK": "SET_WEEK",
   "SET_WEEK_COUNTER": "SET_WEEK_COUNTER",
-  "SET_PADDINGWEEK_DAY": "SET_PADDINGWEEK_DAY",
   "SET_DAY": "SET_DAY",
   "SET_DAY_COUNTER": "SET_DAY_COUNTER"
 };

@@ -5,7 +5,6 @@ const weekinitState = {
   weekCounter: 0,
   day: '',
   dayCounter: 0,
-  hasPaddingWeekDay:false
 };
 
 const weekReducres = (state = weekinitState, action) => {
@@ -22,12 +21,7 @@ const weekReducres = (state = weekinitState, action) => {
         weekCounter: action.payload.weekCounter,
       };
       break;
-    case weekConstants.SET_PADDINGWEEK_DAY:
-      state = {
-        ...state,
-        hasPaddingWeekDay: action.payload.hasPaddingWeekDay,
-      };
-      break;
+
     case weekConstants.SET_DAY:
       state = {
         ...state,

@@ -91,6 +91,7 @@ export const userSignup = data => {
   };
 };
 
+
 export const checkSession = () => {
   return dispatch => {
     dispatch({ type: authConstants.CHECK_SESSION_REQUEST });

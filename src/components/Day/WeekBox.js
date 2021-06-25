@@ -4,9 +4,9 @@ import { setDeleteEvent } from '../../actions/date.action';
 import '../../Styles/week_box.css';
 const WeekBox = ({ day, events, onClick }) => {
     const dispatch = useDispatch()
-    const className = `week_box ${day.paddingWeekDay ? 'paddingWeekDay': ' ' }`
+    
   return (
-    <div className={className}  onClick={onClick}>
+    <div className='week_box'  onClick={onClick}>
       {events && 
         events.length > 0 &&
         events.map(event => (

@@ -20,14 +20,14 @@ const DayDetail = () => {
         key={i}
         day={week.day}
         onClick={() => {
-          dispatch(setClickeEvent(week.day.day));
+          dispatch(setClickeEvent(week.day.day.toISOString().slice(0, 10)));
         }}
       />
     );
   }
 
-  var d = new Date(week.day.day);
-  var dayName = d.toString().split(' ')[0];
+
+  var dayName = week.day.day.toString().split(' ')[0];
 
 
   return (

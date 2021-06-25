@@ -12,10 +12,4 @@
 .week_box:hover {
   background-color: #EEF2FF;
 }
-
-.paddingWeekDay {
-  cursor: default !important;
-  background-color: white !important;
-  box-shadow: 0px 0px 3px #bbbbbb;
-}
 /*# sourceMappingURL=week_box.css.map */

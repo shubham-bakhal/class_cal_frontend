@@ -52,9 +52,9 @@ const Week = () => {
               key={index}
               day={d}
               onClick={() => {
-                if (!d.paddingWeekDay) {
+             
                   dispatch(setClickeEvent(d.day));
-                }
+                
               }}
             />
           ))}

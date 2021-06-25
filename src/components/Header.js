@@ -10,7 +10,7 @@ import {
   setClickeEvent,
   setNav,
 } from '../actions/date.action';
-import { setWeekCounter, setDayCounter, setPaddingWeekDay } from '../actions/week.action';
+import { setWeekCounter, setDayCounter } from '../actions/week.action';
 import { setSearchedFalse } from '../actions/user.action';
 
 const Header = () => {
@@ -18,6 +18,37 @@ const Header = () => {
   const week = useSelector(state => state.week);
   const [calenderType, setCalenderType] = useState('Month');
   const dispatch = useDispatch();
+
+  var displayDate = date.dateDisplay;
+
+  if (calenderType === 'Month') {
+    displayDate = date.dateDisplay;
+  } else if (calenderType === 'Week') {
+    if (
+      new Date(week.week[0].day).getMonth() ===
+      new Date(week.week[6].day).getMonth()
+    ) {
+      displayDate = new Date(week.week[0].day).toLocaleDateString('en-in', {
+        month: 'long',
+        year: 'numeric',
+      });
+    } else {
+      displayDate =
+        new Date(week.week[0].day).toLocaleDateString('en-in', {
+          month: 'long',
+        }) +
+        ' - ' +
+        new Date(week.week[6].day).toLocaleDateString('en-in', {
+          month: 'long',
+          year: 'numeric',
+        });
+    }
+  } else {
+    displayDate =
+      week.day.day.toLocaleDateString('en-in', { month: 'long' }) +
+      ' ' +
+      week.day.day.getFullYear();
+  }
 
   const createNewEvent = () => {
     const dt = Date.now();
@@ -28,15 +59,7 @@ const Header = () => {
     if (date.type === 'Month') {
       dispatch(setNav(date.nav - 1));
     } else if (date.type === 'Week') {
-      if(week.hasPaddingWeekDay){
-        console.log("dev nav");
-        dispatch(setNav(date.nav - 1));
-        dispatch(setPaddingWeekDay(false));
-      }else{
-        console.log("dec weekcounter");
-        dispatch(setWeekCounter(week.weekCounter - 1));
-      }
-      
+      dispatch(setWeekCounter(week.weekCounter - 1));
     } else {
       dispatch(setDayCounter(week.dayCounter - 1));
     }
@@ -46,15 +69,7 @@ const Header = () => {
     if (date.type === 'Month') {
       dispatch(setNav(date.nav + 1));
     } else if (date.type === 'Week') {
-      if(week.hasPaddingWeekDay){
-        console.log("inc nav");
-        dispatch(setNav(date.nav + 1));
-        dispatch(setPaddingWeekDay(false));
-      }else{
-        console.log("inc weekcounter");
-        dispatch(setWeekCounter(week.weekCounter + 1));
-      }
-      
+      dispatch(setWeekCounter(week.weekCounter + 1));
     } else {
       dispatch(setDayCounter(week.dayCounter + 1));
     }
@@ -71,7 +86,7 @@ const Header = () => {
           <img src={left} alt="" />
         </button>
 
-        <p className="date_Month">{date.dateDisplay}</p>
+        <p className="date_Month">{displayDate}</p>
 
         <button onClick={rightActivity}>
           <img src={right} alt="" />

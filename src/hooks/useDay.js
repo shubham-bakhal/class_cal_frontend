@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { setNav } from '../actions/date.action';
 import { setDay } from '../actions/week.action';
 
 export const useDay = () => {
@@ -25,25 +26,29 @@ export const useDay = () => {
   useEffect(() => {
     let curr = new Date();
 
-    if (nav !== 0) {
-      curr.setMonth(new Date().getMonth() + nav);
-    }
-    if (week.weekCounter !== 0) {
-      const weekCounter = week.weekCounter * 7;
-      curr.setDate(new Date().getDate() + weekCounter);
-    }
+    // if (nav !== 0) {
+    //   curr.setMonth(new Date().getMonth() + nav);
+    // }
+    // if (week.weekCounter !== 0) {
+    //   const weekCounter = week.weekCounter * 7;
+    //   curr.setDate(new Date().getDate() + weekCounter);
+    // }
+
     if (week.dayCounter !== 0) {
-      
       curr.setDate(new Date().getDate() + week.dayCounter);
     }
 
+    // if (currentMonth < curr.getMonth()) {
+    //   dispatch(setNav(nav + 1));
+    // } 
+
     const day = {
-      day: curr.toISOString().slice(0, 10),
+      day: curr,
       value: curr.getDate(),
       event: eventForDate(curr),
     };
 
     dispatch(setDay(day));
-  }, [events, nav, week.weekCounter,week.dayCounter ]);
+  }, [events, nav, week.weekCounter, week.dayCounter]);
   return {};
 };
