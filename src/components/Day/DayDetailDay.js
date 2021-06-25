@@ -15,6 +15,7 @@ const DayDetailDay = ({ day, events , onClick}) => {
           <div
             key={event.id}
             className="event"
+            id="dayEvent"
             onClick={e => {
               e.stopPropagation();
 
