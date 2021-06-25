@@ -11,8 +11,6 @@ export const useDate = () => {
   const nav = date.nav;
   const events = date.events;
 
-  console.log(events);
-
   const eventForDate = datestr =>
     events.filter(e => {
       let day = new Date(e.day).getDate();
