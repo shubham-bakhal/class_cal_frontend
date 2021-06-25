@@ -26,21 +26,13 @@ export const useDay = () => {
   useEffect(() => {
     let curr = new Date();
 
-    // if (nav !== 0) {
-    //   curr.setMonth(new Date().getMonth() + nav);
-    // }
-    // if (week.weekCounter !== 0) {
-    //   const weekCounter = week.weekCounter * 7;
-    //   curr.setDate(new Date().getDate() + weekCounter);
-    // }
+  
 
     if (week.dayCounter !== 0) {
       curr.setDate(new Date().getDate() + week.dayCounter);
     }
 
-    // if (currentMonth < curr.getMonth()) {
-    //   dispatch(setNav(nav + 1));
-    // } 
+    
 
     const day = {
       day: curr,

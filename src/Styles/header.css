@@ -74,6 +74,22 @@
   width: 100%;
   border: 2px solid #6366F1;
   border-radius: 4px;
-  appearance: none;
+}
+
+@media (max-width: 710px) {
+  #header .left_header div {
+    padding: 6px;
+  }
+  #header .right_header .createbtn {
+    font-size: 14px;
+  }
+  #header .right_header .createbtn img {
+    width: 20%;
+  }
+  #header .right_header .select_dropdown select {
+    font-size: 12px;
+    padding: 5px;
+    width: 70px;
+  }
 }
 /*# sourceMappingURL=header.css.map */

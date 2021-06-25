@@ -1,11 +1,11 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setWeek } from '../actions/week.action';
 export const useWeek = () => {
-  const events = useSelector(state => state.date).events;
+  const date = useSelector(state => state.date);
   const week = useSelector(state => state.week);
   const dispatch = useDispatch();
-
+  const events = date.events;
 
   const eventForDate = date =>
     events.filter(e => {
@@ -19,7 +19,6 @@ export const useWeek = () => {
         date.getFullYear() === year
       );
     });
-
 
   useEffect(() => {
     let curr = new Date();
@@ -44,7 +43,6 @@ export const useWeek = () => {
     }
 
     dispatch(setWeek(weekArr));
-
   }, [events, week.weekCounter]);
   return {};
 };

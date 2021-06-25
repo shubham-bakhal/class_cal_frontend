@@ -6,21 +6,20 @@ import {
   setDayArr,
 } from '../actions/date.action';
 export const useDate = () => {
-  const date = useSelector(state => state.date);
   const dispatch = useDispatch();
-
+  const date = useSelector(state => state.date);
   const nav = date.nav;
   const events = date.events;
 
-  // const eventForDate = date => events.find(e => e.date === date);
+  console.log(events);
 
-  const eventForDate = date =>
+  const eventForDate = datestr =>
     events.filter(e => {
       let day = new Date(e.day).getDate();
       let month = new Date(e.day).getMonth();
       let year = new Date(e.day).getFullYear();
 
-      return date === `${year}-${month + 1}-${day}`;
+      return datestr === `${year}-${month + 1}-${day}`;
     });
 
   useEffect(() => {
@@ -65,7 +64,7 @@ export const useDate = () => {
     const daysArr = [];
     for (let i = 1; i <= paddingDays + daysInMonth; i++) {
       const dayString = `${year}-${month + 1}-${i - paddingDays}`;
-      // const dayString = `${month + 1}/${i - paddingDays}/${year}`;
+     
 
       if (i > paddingDays) {
         daysArr.push({

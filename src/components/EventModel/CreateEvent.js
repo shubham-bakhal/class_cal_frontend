@@ -94,7 +94,7 @@ const CreateEvent = ({ onClose }) => {
             </select>
           </div>
 
-          <input
+          <textarea 
             id="eventTitleInput"
             value={Note}
             onChange={e => setNote(e.target.value)}

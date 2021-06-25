@@ -38,9 +38,21 @@
   width: 32px;
 }
 
-@media (max-width: 800px) {
-  .search input {
-    padding: 9px 10rem 9px 1rem;
+@media (max-width: 898px) {
+  #navbar .search input {
+    padding: 9px 20rem 9px 1rem;
+  }
+}
+
+@media (max-width: 780px) {
+  #navbar .search input {
+    padding: 9px 11rem 9px 1rem;
+  }
+}
+
+@media (max-width: 650px) {
+  #navbar .search input {
+    padding: 9px 6rem 9px 1rem;
   }
 }
 /*# sourceMappingURL=navbar.css.map */

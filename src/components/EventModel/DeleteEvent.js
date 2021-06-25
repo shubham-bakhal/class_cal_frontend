@@ -112,7 +112,7 @@ const DeleteEvent = () => {
             </select>
           </div>
 
-          <input
+          <textarea
             id="eventTitleInput"
             value={Note}
             required
@@ -125,7 +125,7 @@ const DeleteEvent = () => {
         <button onClick={onDelete} id="deleteButton">
           Delete
         </button>
-        <button onClick={onUpdate} id="closeButton">update</button>
+        <button onClick={onUpdate} id="updateButton">update</button>
       </div>
 
       <div id="modalBackDrop"></div>
