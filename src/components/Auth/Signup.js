@@ -14,18 +14,21 @@ const Signup = () => {
   const location = useLocation();
 
   const signupSubmit = e => {
-      
-        e.preventDefault();
-        const signupData = {
-            firstName,
-            lastName,
-            email,
-            password,
-          Role
-        };
-        dispatch(userSignup(signupData));
-      };
-
+    if (Role) {
+      Role = 'Admin';
+    } else {
+      Role = 'Teacher';
+    }
+    e.preventDefault();
+    const signupData = {
+      firstName,
+      lastName,
+      email,
+      password,
+      Role,
+    };
+    dispatch(userSignup(signupData));
+  };
 
   return (
     <div id="signup">
@@ -72,7 +75,11 @@ const Signup = () => {
           />
         </div>
         <div id="admin">
-          <input type="checkbox"  value={Role} onChange={e => setRole(e.target.value)} />
+          <input
+            type="checkbox"
+            value={Role}
+            onChange={e => setRole(e.target.value)}
+          />
           <span>Make me admin</span>
         </div>
 
