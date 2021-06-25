@@ -1,0 +1,25 @@
+@import './variables/_variables.scss';
+
+.week_box {
+  text-align: center;
+  padding: 10px;
+  height: 50px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: white;
+  z-index: 1;
+  box-shadow: 0px 0px 3px $gray-color;
+  &:hover {
+    background-color: $primary-light;
+  }
+}
+
+.paddingWeekDay{
+  cursor: default !important;
+  background-color: white !important;
+  box-shadow: 0px 0px 3px rgb(187, 187, 187);
+}
+
+// .week_box + .currentweek_box {
+//     background-color: $primary-light;
+//   }

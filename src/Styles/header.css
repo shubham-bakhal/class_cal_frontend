@@ -1,0 +1,79 @@
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0% 7.2% 0% 2%;
+  margin: 1% 0%;
+}
+
+#header button {
+  border: none;
+  outline: none;
+}
+
+#header .left_header {
+  display: flex;
+}
+
+#header .left_header p {
+  margin: 0px 15px;
+}
+
+#header .left_header button {
+  background-color: white;
+}
+
+#header .left_header img {
+  cursor: pointer;
+}
+
+#header .left_header div {
+  display: flex;
+  cursor: pointer;
+  border: 2px solid #6366F1;
+  border-radius: 4px;
+  padding: 8px 8px;
+  margin-left: 40px;
+}
+
+#header .left_header div img {
+  margin-left: 20px;
+}
+
+#header .right_header {
+  display: flex;
+}
+
+#header .right_header .createbtn {
+  display: flex;
+  padding: 10px 12px;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  background-color: #6366F1;
+  border-radius: 8px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+#header .right_header .createbtn img {
+  margin-right: 10px;
+}
+
+#header .right_header .select_dropdown {
+  width: 100px;
+  position: relative;
+}
+
+#header .right_header .select_dropdown select {
+  cursor: pointer;
+  height: 40px;
+  padding: 8px 15px;
+  line-height: 18px;
+  font-size: 16px;
+  width: 100%;
+  border: 2px solid #6366F1;
+  border-radius: 4px;
+  appearance: none;
+}
+/*# sourceMappingURL=header.css.map */

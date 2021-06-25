@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/Navbar';
+import Routes from './Routes/Routes';
+import CreateEvent from './components/EventModel/CreateEvent';
+import DeleteEvent from './components/EventModel/DeleteEvent';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAllEvents, setClickeEvent } from './actions/date.action';
+import { useDate } from './hooks/useDate';
+import { checkSession } from './actions/auth.action';
+import { useEffect } from 'react';
+import { useWeek } from './hooks/useWeek';
+import { useDay } from './hooks/useDay';
 
 function App() {
+  const date = useSelector(state => state.date);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(checkSession());
+    dispatch(getAllEvents());
+    //eslint-disable-next-line
+  }, []);
+
+  // for month
+  useDate();
+  useWeek();
+  useDay();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+
+      <Routes />
+
+      {date.clicked && (
+        <CreateEvent onClose={() => dispatch(setClickeEvent(null))} />
+      )}
+
+      {date.deleteEvent && <DeleteEvent />}
     </div>
   );
 }
