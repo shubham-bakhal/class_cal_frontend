@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
 import { userSignup } from '../../actions/auth.action';
-import '../../Styles/signup.css';
+import '../../Styles/css/signup.css';
 
 const Signup = () => {
   const [firstName, setFirstName] = useState('');

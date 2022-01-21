@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import close from '../../assets/close.svg';
 import { useDispatch, useSelector } from 'react-redux';
-import '../../Styles/deleteEventModel.css';
+import '../../Styles/css/deleteEventModel.css';
 import {
   deleteSelectedEvent,
   removeDeleteEvent,

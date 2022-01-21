@@ -6,7 +6,7 @@ import {
   updateDraggedEvent,
   updateSelectedEvent,
 } from '../../actions/date.action';
-import '../../Styles/day.css';
+import '../../Styles/css/day.css';
 
 const MonthDay = ({ day, onClick }) => {
   const date = useSelector(state => state.date);

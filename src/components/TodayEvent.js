@@ -1,7 +1,7 @@
 import React from 'react';
 
 import TodayCard from './TodayCard';
-import '../Styles/todayevents.css';
+import '../Styles/css/todayevents.css';
 import { useSelector } from 'react-redux';
 
 const TodayEvent = () => {

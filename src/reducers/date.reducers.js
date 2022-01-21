@@ -10,7 +10,7 @@ const datainitState = {
   loading: false,
   availableTeachers: [],
   todaysEvents: [],
-  type: ''
+  type: '',
 };
 
 const dateReducres = (state = datainitState, action) => {
@@ -143,8 +143,6 @@ const dateReducres = (state = datainitState, action) => {
       };
       break;
     case dateConstants.UPDATE_EVENTS_SUCCESS:
-
-
       const UpdatedEvents = state.events.map(e =>
         e.id === action.payload.updatedEvent.id
           ? action.payload.updatedEvent

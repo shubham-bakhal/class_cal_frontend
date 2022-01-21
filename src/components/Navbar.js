@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../Styles/navbar.css';
+import '../Styles/css/navbar.css';
 import search from '../assets/search.svg';
 import profile from '../assets/profile.svg';
 import { useDispatch, useSelector } from 'react-redux';

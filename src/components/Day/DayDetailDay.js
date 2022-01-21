@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { setDeleteEvent } from '../../actions/date.action';
-import '../../Styles/daydetailday.css'
+import '../../Styles/css/daydetailday.css'
 
 
 const DayDetailDay = ({ day, events , onClick}) => {

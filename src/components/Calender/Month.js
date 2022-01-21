@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import MonthDay from '../Day/MonthDay';
-import '../../Styles/month.css';
+import '../../Styles/css/month.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { setClickeEvent } from '../../actions/date.action';
 

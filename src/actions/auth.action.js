@@ -74,19 +74,20 @@ export const userSignup = data => {
         });
       })
       .catch(e => {
-        if (e.response.status === 422) {
-          e.response.data.forEach(element => {
-            toast.error(Object.entries(element)[0][1]);
-          });
-        } else {
-          toast.error(e.response.data);
-        }
-        dispatch({
-          type: authConstants.SIGNUP_FAILURE,
-          payload: {
-            error: e.response.data,
-          },
-        });
+        console.log(e);
+        // if (e.response.status === 422) {
+        //   e.response.data.forEach(element => {
+        //     toast.error(Object.entries(element)[0][1]);
+        //   });
+        // } else {
+        //   toast.error(e.response.data);
+        // }
+        // dispatch({
+        //   type: authConstants.SIGNUP_FAILURE,
+        //   payload: {
+        //     error: e.response.data,
+        //   },
+        // });
       });
   };
 };

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../../Styles/createEventModel.css';
+import '../../Styles/css/createEventModel.css';
 import close from '../../assets/close.svg';
 
 import { useDispatch, useSelector } from 'react-redux';

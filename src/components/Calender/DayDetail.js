@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import DayDetailDay from '../Day/DayDetailDay';
-import '../../Styles/daydetail.css';
+import '../../Styles/css/daydetail.css';
 import { setClickeEvent } from '../../actions/date.action';
 
 const DayDetail = () => {

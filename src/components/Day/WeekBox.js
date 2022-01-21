@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { setDeleteEvent } from '../../actions/date.action';
-import '../../Styles/week_box.css';
+import '../../Styles/css/week_box.css';
 const WeekBox = ({ day, events, onClick }) => {
     const dispatch = useDispatch()
     

@@ -4,7 +4,7 @@ import Month from '../components/Calender/Month';
 import Week from "../components/Calender/Week"
 import DayDetail from "../components/Calender/DayDetail"
 import TodayEvent from '../components/TodayEvent';
-import '../Styles/dashboard.css';
+import '../Styles/css/dashboard.css';
 import { useSelector } from 'react-redux';
 
 const Dashboard = () => {

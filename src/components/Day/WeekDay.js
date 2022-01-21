@@ -1,6 +1,6 @@
 import React from 'react';
 import WeekBox from './WeekBox';
-import '../../Styles/weekday.css';
+import '../../Styles/css/weekday.css';
 
 const WeekDay = ({ day, onClick }) => {
   var rows = [];

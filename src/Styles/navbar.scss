@@ -7,7 +7,7 @@
   justify-content: space-between;
   padding: 0.4rem 5.5%;
   color: white;
-  #logo{
+  #logo {
     color: white;
     text-decoration: none;
   }
@@ -29,13 +29,11 @@
         cursor: pointer;
       }
     }
-   
   }
-  img{
+  img {
     width: 32px;
   }
 }
-
 
 @media (max-width: 898px) {
   #navbar {
@@ -45,7 +43,6 @@
       }
     }
   }
- 
 }
 @media (max-width: 780px) {
   #navbar {
@@ -55,7 +52,6 @@
       }
     }
   }
- 
 }
 @media (max-width: 650px) {
   #navbar {
@@ -65,5 +61,4 @@
       }
     }
   }
- 
 }

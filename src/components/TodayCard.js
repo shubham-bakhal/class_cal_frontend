@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Styles/todaycard.css';
+import '../Styles/css/todaycard.css';
 
 const TodayCard = ({ t }) => {
   return (

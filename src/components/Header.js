@@ -3,7 +3,7 @@ import today from '../assets/today.svg';
 import left from '../assets/left.svg';
 import right from '../assets/right.svg';
 import add from '../assets/add.svg';
-import '../Styles/header.css';
+import '../Styles/css/header.css';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   setCalenderTypeStore,
